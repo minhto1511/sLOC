@@ -50,18 +50,18 @@ class Solution {
         }
         return third == null ? first : third;
     }
-    //    public int thirdMax(int[] nums) {
-//        Arrays.sort(nums); // Sắp xếp mảng tăng dần
-//        int distinctCount = 1; // Đếm giá trị duy nhất
-//        for (int i = nums.length - 2; i >= 0; i--) {
-//            if (nums[i] != nums[i + 1]) {
-//                distinctCount++;
-//            }
-//            if (distinctCount == 3) {
-//                return nums[i];
-//            }
-//        }
-//        // Nếu không đủ 3 giá trị duy nhất, trả về giá trị thứ hai
-//        return nums[nums.length - 1];
-//    }
+        public int thirdMax(int[] nums) {
+        Arrays.sort(nums); // Sắp xếp mảng tăng dần
+        int distinctCount = 1; // Đếm giá trị duy nhất
+        for (int i = nums.length - 2; i >= 0; i--) {
+            if (nums[i] != nums[i + 1]) {
+                distinctCount++;
+            }
+            if (distinctCount == 3) {
+                return nums[i];
+            }
+        }
+        // Nếu không đủ 3 giá trị duy nhất, trả về giá trị thứ hai
+        return nums[nums.length - 1];
+    }
 }
